@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="commercers" translate="label" sortOrder="10">
+            <label>Commercers</label>
+        </tab>
+        <section id="auto_delete" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Auto Delete</label>
+            <tab>commercers</tab>
+            <resource>Commercers_AutoDelete::autodelete_config</resource>
+            <group id="delte" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Auto Delete</label>
+                <field id="active" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="set_date_delete_folder" translate="label" type="textarea" sortOrder="2" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Set day delete folder</label>
+                    <depends>
+                        <field id="active">1</field>
+                    </depends>
+                </field>
+                <field id="set_size_delete_file" translate="label" type="textarea" sortOrder="3" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Set size delete file</label>
+                    <depends>
+                        <field id="active">1</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
