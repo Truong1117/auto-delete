@@ -27,6 +27,27 @@
                         <field id="active">1</field>
                     </depends>
                 </field>
+                <field id="time_run" translate="label comment" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <depends>
+                        <field id="active">1</field>
+                    </depends>
+                    <label>Start Time</label>
+                    <comment>
+                        <![CDATA[
+                    This will allow you to define schedule
+<pre>
+* * * * *
+| | | | |
+| | | | +---- Day of the Week   (range: 1-7, 1 standing for Monday)
+| | | +------ Month of the Year (range: 1-12)
+| | +-------- Day of the Month  (range: 1-31)
+| +---------- Hour              (range: 0-23)
++------------ Minute            (range: 0-59)
+Example: 0 0 * * * Daily at midnight
+</pre>
+                    ]]>
+                    </comment>
+                </field>
             </group>
         </section>
     </system>
